@@ -1,18 +1,6 @@
 let chart;
 let history = [];
 
-// LOGIN
-function login(){
-  if(
-    document.getElementById("user").value==="admin" &&
-    document.getElementById("pass").value==="2026"
-  ){
-    document.getElementById("loginScreen").style.display="none";
-    document.getElementById("app").style.display="flex";
-  } else {
-    alert("Wrong login");
-  }
-}
 
 // NAV
 function showSection(id){
