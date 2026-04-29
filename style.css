@@ -1,0 +1,55 @@
+body {
+  margin:0;
+  font-family:Arial;
+  background:#0b1020;
+  color:white;
+}
+
+.login {
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.login-box {
+  background:#111a2e;
+  padding:30px;
+  border-radius:10px;
+}
+
+input, select {
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+}
+
+button {
+  margin-top:10px;
+  width:100%;
+  padding:10px;
+  background:#22c55e;
+  border:none;
+  color:white;
+  border-radius:8px;
+}
+
+.app {
+  display:flex;
+}
+
+.sidebar {
+  width:200px;
+  background:#111a2e;
+  height:100vh;
+  padding:10px;
+}
+
+.main {
+  flex:1;
+  padding:20px;
+}
+
+canvas {
+  margin-top:20px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Campaign AI</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="loginScreen" class="login">
+  <div class="login-box">
+    <h1>🚀 Campaign AI</h1>
+    <input id="user" placeholder="Username">
+    <input id="pass" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+<div id="app" class="app" style="display:none;">
+
+  <div class="sidebar">
+    <button onclick="showSection('dashboard')">Dashboard</button>
+    <button onclick="showSection('analytics')">Analytics</button>
+    <button onclick="showSection('export')">Export</button>
+  </div>
+
+  <div class="main">
+
+    <div id="dashboard" class="section">
+
+      <h2>Campaign Builder</h2>
+
+      <input id="budget" type="number" placeholder="Budget">
+
+      <!-- 🎯 AGE -->
+      <select id="age">
+        <option>13-17</option>
+        <option>18-24</option>
+        <option>25-34</option>
+        <option>35-44</option>
+        <option>45+</option>
+      </select>
+
+      <!-- 📊 CAMPAIGN TYPE -->
+      <select id="campaignType">
+        <option value="awareness">Awareness</option>
+        <option value="traffic">Traffic</option>
+        <option value="leads">Leads</option>
+        <option value="sales">Sales</option>
+      </select>
+
+      <br><br>
+
+      <!-- 📱 PLATFORMS -->
+      <label><input type="checkbox" class="platform" value="tiktok"> TikTok</label>
+      <label><input type="checkbox" class="platform" value="instagram"> Instagram</label>
+      <label><input type="checkbox" class="platform" value="snapchat"> Snapchat</label>
+      <label><input type="checkbox" class="platform" value="facebook"> Facebook</label>
+      <label><input type="checkbox" class="platform" value="linkedin"> LinkedIn</label>
+
+      <button onclick="runCampaign()">Run Analysis</button>
+      <button onclick="resetCampaign()">Reset</button>
+
+      <div id="output"></div>
+      <canvas id="chart"></canvas>
+    </div>
+
+    <div id="analytics" class="section" style="display:none;">
+      <h3>History</h3>
+      <div id="historyBox"></div>
+    </div>
+
+    <div id="export" class="section" style="display:none;">
+      <button onclick="exportWord()">Export to Word</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
